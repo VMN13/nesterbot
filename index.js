@@ -3,8 +3,7 @@ const express = require('express');
 const cors = require('cors');
 
 const token = '7037516293:AAH5FcJ1FRVL1JWn0nfhlBrpM7UDO6XwW6A';
-const webAppUrl = 'https://coinbpm.vercel.app/';
-
+const webAppUrl = 'https://airdrop-rose-iota.vercel.app/';
 
 const bot = new TelegramBot(token, {polling: true});
 const app = express();
@@ -13,6 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 bot.on('message', async (msg) => {
+    
     const chatId = msg.chat.id;
     const text = msg.text;
 
@@ -24,9 +24,6 @@ bot.on('message', async (msg) => {
                 ]
             }
         })
-
-       
-       
     }
 
   
